@@ -11,9 +11,14 @@ body{
     width: 750px;
     padding: 25px;  
 }
+.imagem-financa{
+    justify-content: center;
+    display: flex;
+}
 .logotipo{
     width: 100%;
-    height: 65%;
+    height: 270px;
+    object-fit: fill;
 }
 .Introducao{
     font-family: georgia,arial, sans-serif;
