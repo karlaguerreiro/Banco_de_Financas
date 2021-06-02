@@ -9,65 +9,98 @@
             <meta name="keywords" content="html5 tecnologia">
             <link rel="stylesheet" type="text/css" href="./css/style.css">
         </head>
+        
         <body>
             <div class="imagem-financa">
                 <img src="./assets/img/bancodefinancas.jpg" alt="Logotipo Banco de Finanças" class="logotipo">
             </div>  
             <div class="conteudo">
-            <p class="Introducao">Seja bem vindo ao Banco de Finanças!<br>
-                 Aqui você pode administrar suas finanças de forma prática e rápida.</p>
-        <br>
-            <h1 class="Subtitulo">Insira os dados a serem calculados:</h1>
+                <p class="introducao">
+                    Seja bem vindo ao Banco de Finanças!<br>
+                    Aqui você pode administrar suas finanças de forma prática e rápida.
+                </p>
         
-        
-            <form  method="post" action="#" class="paginaweb" >
-            <fieldset class="fieldset">
-        <br>
-        
-            <legend class="legend"> Dados Pessoais</legend>
-            <label class="labels">Nome completo:</label>
-            <input type="text" class="input1">
-    
-        <br>
-        <br>
-            <label class="labels">Email:</label>
-            <input type="email" required maxlength="100" placeholder="Digite um email" class="input2">
-        <br>
-        <br>
-            <label class="labels"> Data de nascimento:</label>
-            <input type="date" min="1900-01-01" max="2200-01-01">  
-            <div class="labels">
-        <br>
-    
-            Sexo:
-            <input type="radio" name="sex" id="sexo-m"/>
-            <label class="labels" for="sexo-m">Masculino</label>
-            <input type="radio" name="sex" id="sexo-f"/>
-            <label class="labels" for="sexo-f">Feminino</label>
-    
-        <br>
-        <br>
-           <fieldset> 
-         
-        <br>
-        <br>
-            <legend class="legend">Informações financeiras</legend>
-            <label class="labels"> Renda fixa mensal:</label>
-            <input type="number" name="number">
-    
-            <label class="labels">Renda extra mensal:</label>
-            <input type="number" name="number">
-        <br>
-        <br>
-            <label class="labels"> Cálcular receitas:</label>
-            <input type="text" name="text" class="input3">
-            <input type="button" value="Calcular" class="buttons">
-        <br>
-        <br>
-            <input type="submit" value="Enviar" class="buttons">
-            <input type="reset" value="Limpar" class="buttons">
-            </form>
+                <h1 class="subtitulo">Insira os dados a serem calculados:</h1>
+            
+                <form  method="post" action="#" class="paginaweb" >
+                <fieldset class="fieldset">
+                    <br>
+                
+                    <legend class="legend"> Dados Pessoais</legend>
+                    <label class="labels">Nome completo:</label>
+                    <input type="text" class="input">
+            
+                    <br>
+                    <label class="labels">Email:</label>
+                    <input type="email" required maxlength="100" placeholder="Digite um email" class="input">
+            
+                    <br>
+                    <label class="labels"> Data de nascimento:</label>
+                    <input type="date" min="1900-01-01" max="2200-01-01">  
+                    <div class="labels">
+                    <br>
+            
+                    Sexo:
+                    <input type="radio" name="sex" id="sexo-m"/>
+                    <label class="labels" for="sexo-m">Masculino</label>
+                    <input type="radio" name="sex" id="sexo-f"/>
+                    <label class="labels" for="sexo-f">Feminino</label>
+
+                    <br>
+                </fieldset>
+
+                <fieldset  class="fieldset" > 
+                    <br>
+                    <legend class="legend">Informações financeiras</legend>
+                    <label class="labels"> Renda fixa mensal:</label>
+                    <input type="number" name="number">
+
+                    <label class="labels">Renda extra mensal:</label>
+                    <input type="number" name="number">
+                    <br>
+            
+                    <label class="labels"> Cálcular receitas:</label>
+                    <input type="text" name="text" class="input">
+                    <input type="button" value="Calcular" class="buttons">
+                    <br>            
+                </fieldset>
+               
+                <fieldset  class="fieldset">
+                    <legend class="legend">Informações de despesas</legend>
+                    <br>
+                    <h1 class="subtitulo">Despesa 1:</h1>
+                    <label class="labels"> Escolha uma categoria:</label>
+                    <select name="Categorias">
+                        <option value="Selecione">Selecione</option>
+                        <option value="Luz">Luz</option>
+                        <option value="Água">Água</option>
+                        <option value="Telefone">Telefone</option>
+                        <option value="Locomoção">Locomoção</option>
+                        <option value="Outros">Gastos anuais (ipva, iptu...)</option>
+                        <option value="Outros">Outros</option>
+                    </select>
+                    <br>
+
+                    <br>
+                    <label class="labels"> Descrição (Opcional):</label>
+                    <textarea rows="3"  class="input"></textarea>
+                    <br>
+                    <label class="labels"> Data de vencimento (Opcional):</label>
+                    <input type="date" min="1900-01-01" max="2200-01-01" > 
+                    <br>
+                    <label class="labels"> Digite o valor gasto:</label>
+                    <input type="number" name="number" class="number">
+                    <br>                    
+                    <input type="button" value="Inserir nova despesa" class="buttons">
+
+                </fieldset>
+
+                <br>
+                
+                <input type="submit" value="Enviar" class="buttons">
+                <input type="reset" value="Limpar" class="buttons">
+                
+                </form>
             </div>
-        </body>
-    </html>
-    
+    </body>
+</html>
