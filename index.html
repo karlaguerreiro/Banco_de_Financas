@@ -54,16 +54,29 @@
                 <div class="rendas">
                     <div class="renda-fixa">
                         <label class="labels"> Renda fixa mensal:</label>
-                        <input type="number" name="number">
+                        <input type="number" name="number1" id="number1">
                     </div>
                     <div class="renda-extra">
                         <label class="labels">Renda extra mensal:</label>
-                        <input type="number" name="number">
+                        <input type="number" name="number2" id="number2">
                     </div>
                 </div>
+
                 <br>
                 <label class="labels"> Calculo de receitas:</label>
-                <input type="button" value="Calcular" class="buttons btn-renda">
+                <input type="text" name="result" id="result" readonly>
+                <input type="button" value="Calcular" class="buttons btn-renda" onclick="calcular();" name="">
+                
+                
+                <script type="text/javascript"> 
+                    function calcular(){
+                        let val1 = parseFloat(document.getElementById("number1").value);
+                        let val2 = parseFloat(document.getElementById("number2").value);
+                        let result = document.getElementById("result");
+
+                        result.value = val1 + val2;
+                    }
+                </script>
 
             </fieldset>
 
