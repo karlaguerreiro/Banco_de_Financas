@@ -126,3 +126,27 @@ input[type=number] {
     margin-left: 482px;
     margin-top: 25px;
 }
+
+.content{
+    margin: 15px;
+}
+
+table{
+    border-collapse: collapse;
+    border: 1px solid   black;
+    width: 100%;
+
+}
+
+table th{
+    background-color: cornflowerblue;
+}
+
+table td img{
+    width: 23px;
+
+}
+
+.center{
+    text-align: center;
+}

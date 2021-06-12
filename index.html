@@ -9,6 +9,7 @@
     <meta name="keywords" content="html5 tecnologia">
     <link rel="stylesheet" type="text/css" href="./css/style.css">
     <title>Banco de Finanças</title>
+    <script src="js/base.js"></script>
 </head>
 
 <body>
@@ -21,7 +22,7 @@
         </p>
 
 
-        <form method="post" action="#" class="paginaweb">
+        <form method="GET" action="#" class="paginaweb">
             <fieldset class="fieldset">
                 <legend class="legend"> Dados Pessoais</legend>
                 <div>
@@ -30,7 +31,7 @@
                 </div>
                 <div>
                     <label class="labels">Email:</label>
-                    <input type="email" required maxlength="100" placeholder="Digite um email" class="input">
+                    <input type="email" maxlength="100" placeholder="Digite um email" class="input">
                 </div>
                 <div>
                     <label class="labels"> Data de nascimento:</label>
@@ -65,16 +66,16 @@
                 <br>
                 <label class="labels"> Calculo de receitas:</label>
                 <input type="text" name="result" id="result" readonly>
-                <input type="button" value="Calcular" class="buttons btn-renda" onclick="calcular();" name="">
-                
+                <input type="button" value="Calcular" class="buttons btn-renda" onclick="calcular()" name="">
                 
                 <script type="text/javascript"> 
                     function calcular(){
-                        let val1 = parseFloat(document.getElementById("number1").value);
-                        let val2 = parseFloat(document.getElementById("number2").value);
-                        let result = document.getElementById("result");
+                    let val1 = parseFloat(document.getElementById("number1").value);
+                    let val2 = parseFloat(document.getElementById("number2").value);
+                    let result = document.getElementById("result");
 
-                        result.value = val1 + val2;
+                    result.value = val1 + val2;
+
                     }
                 </script>
 
@@ -85,61 +86,59 @@
 
                 <h1 class="subtitulo">Despesa :</h1>
                 <label class="labels"> Escolha uma categoria:</label>
-                <select name="Categorias">
-                            <option value="Selecione">Selecione</option>
+                <select name="Categorias" id="categoria" onchange="selecao();">
+                            <option value="">Selecione</option>
                             <option value="Luz">Luz</option>
                             <option value="Água">Água</option>
                             <option value="Telefone">Telefone</option>
                             <option value="Locomoção">Locomoção</option>
-                            <option value="Outros">Gastos anuais (ipva, iptu...)</option>
+                            <option value="Gerais">Gastos anuais (ipva, iptu...)</option>
                             <option value="Outros">Outros</option>
                 </select>
+                <script>
+                    function selecao(){
+                        var selecionado = document.getElementById("categoria").value;
+                        console.log(selecionado);
+                    }
+                    selecao();
+
+                </script>
                 <div>
                     <label class="labels"> Descrição (Opcional):</label>
-                    <textarea rows="3" class="input"></textarea>
+                    <input rows="3" class="input" id="descricao" type="text">
                     <div class="data-gasto">
                         <div class="date-venc">
-                            <label class="labels"> Data de vencimento (Opcional):</label>
-                            <input type="date" min="1900-01-01" max="2200-01-01">
+                            <label class="labels"> Data de vencimento:</label>
+                            <input type="date" min="1900-01-01" max="2200-01-01" id="vencimento">
                         </div>
                         <div class="gasto">
                             <label class="labels"> Digite o valor gasto:</label>
-                            <input type="number" name="number" class="number">
+                            <input type="number" name="number" class="number" id="valor">
                         </div>
                     </div>
 
-                    <input type="button" value="Inserir nova despesa" class="buttons btn-new">
+                    <input type="button" value="Adicionar Despesa" class="buttons btn-renda" onclick="despesa.adicionar()">
+                    <input type="button" value="Remover Despesa" class="buttons btn-renda" onclick="despesa.cancelar()">
                 </div>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Categoria</th>
-                            <th>Vencimento</th>
-                            <th>Valor</th>
-                            <th>Descrição</th>
-                        </tr>
-                    </thead>
-                    <tbody>
+                <div class="content">
+                    <table border = "1">
+                        <thead class="center">
+                            <th >Categoria</th>
+                            <th > Vencimento</th>
+                            <th >Valor</th>
+                            <th >Descrição</th>  
+                            <th >Ações</th>                          
+                        </thead>
+                        <tbody id="tbody">
 
-                    </tbody>    
-                </table>
-                <div>
-                    <script type="text/javascript">
-                        function tabela_despesas(){
-
-                        }
-                    
-                    
-                    
-                    </script>
-                    
-
+                        </tbody>    
+                    </table>
                 </div>
             </fieldset>
 
             <div class="button-finish">
                 <input type="submit" value="Enviar" class="buttons">
-                <input type="reset" value="Limpar" class="buttons">
+                <input type="reset"  value="Limpar" class="buttons">
             </div>
 
         </form>
