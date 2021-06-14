@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+
 <html>
 
 <head>
@@ -67,23 +67,10 @@
                 <label class="labels"> Calculo de receitas:</label>
                 <input type="text" name="result" id="result" readonly>
                 <input type="button" value="Calcular" class="buttons btn-renda" onclick="calcular()" name="">
-                
-                <script type="text/javascript"> 
-                    function calcular(){
-                    let val1 = parseFloat(document.getElementById("number1").value);
-                    let val2 = parseFloat(document.getElementById("number2").value);
-                    let result = document.getElementById("result");
-
-                    result.value = val1 + val2;
-
-                    }
-                </script>
-
             </fieldset>
 
             <fieldset class="fieldset">
                 <legend class="legend">Informações de despesas</legend>
-
                 <h1 class="subtitulo">Despesa :</h1>
                 <label class="labels"> Escolha uma categoria:</label>
                 <select name="Categorias" id="categoria" onchange="selecao();">
@@ -95,14 +82,7 @@
                             <option value="Gerais">Gastos anuais (ipva, iptu...)</option>
                             <option value="Outros">Outros</option>
                 </select>
-                <script>
-                    function selecao(){
-                        var selecionado = document.getElementById("categoria").value;
-                        console.log(selecionado);
-                    }
-                    selecao();
 
-                </script>
                 <div>
                     <label class="labels"> Descrição (Opcional):</label>
                     <input rows="3" class="input" id="descricao" type="text">
@@ -116,30 +96,38 @@
                             <input type="number" name="number" class="number" id="valor">
                         </div>
                     </div>
-
-                    <input type="button" value="Adicionar Despesa" class="buttons btn-renda" onclick="despesa.adicionar()">
-                    <input type="button" value="Remover Despesa" class="buttons btn-renda" onclick="despesa.cancelar()">
+                </div>                
+                <div class="btn-adicina-remove">
+                    <input type="button" value="Adicionar Despesa" class="buttons btn-adiciona-renda" onclick="despesa.adicionar()">
+                    <input type="button" value="Limpar Campos" class="buttons btn-remove-renda" onclick="despesa.cancelar()">    
                 </div>
+
+            </fieldset>
+
+            <fieldset class="fieldset">
+                <legend class="legend">Minha Tabela de gastos </legend>
                 <div class="content">
                     <table border = "1">
                         <thead class="center">
+                            <th>ID</th>
                             <th >Categoria</th>
-                            <th > Vencimento</th>
+                            <th >Vencimento</th>
                             <th >Valor</th>
                             <th >Descrição</th>  
-                            <th >Ações</th>                          
+                            <th>Ações</th>                          
                         </thead>
-                        <tbody id="tbody">
-
-                        </tbody>    
-                    </table>
+                        <tbody id="tb-dados-categoria">
+                           
+                        </tbody> 
+                    </table>   
+                   
                 </div>
             </fieldset>
 
-            <div class="button-finish">
+            <!-- <div class="button-finish">
                 <input type="submit" value="Enviar" class="buttons">
                 <input type="reset"  value="Limpar" class="buttons">
-            </div>
+            </div> -->
 
         </form>
         </div>
