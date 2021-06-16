@@ -95,7 +95,10 @@ class Despesa {
             tabela.childNodes[0].remove();
         }
 
+        let acumulador = 0;
         for (let i = 0; i < this.categorias.length; i++) {
+            acumulador = parseFloat(acumulador)  + parseFloat(this.categorias[i].valor);
+            console.log(acumulador);
             let tr = document.createElement("tr");
             let id = document.createElement("td");
             let categoria = document.createElement("td");
@@ -124,7 +127,6 @@ class Despesa {
             valor.innerText      = this.categorias[i].valor;
             descricao.innerText  = this.categorias[i].descricao;
 
-
             tr.appendChild(id);
             tr.appendChild(categoria);
             tr.appendChild(vencimento);
@@ -132,9 +134,11 @@ class Despesa {
             tr.appendChild(descricao);
             tr.appendChild(acoes);
             tabela.appendChild(tr);
-            
-        }
+        }        
+        let totalR = document.getElementById("total");
+        totalR.innerText = acumulador;
     }
+  
 }
 
 var despesa = new Despesa();
