@@ -3,7 +3,7 @@ body {
     margin: auto;
     width: 800px;
     background-size: 100%;
-    background-color: rgb(237, 236, 245);
+    background-color: rgb(7, 7, 43);
 }
 
 .conteudo {
@@ -20,7 +20,14 @@ body {
 
 .logotipo {
     width: 100%;
-    height: 270px;
+    height: 400px;
+    object-fit: fill;
+   
+ 
+}
+.imgfinanceiro{
+    width: 100%;
+    height:300px;
     object-fit: fill;
 }
 
@@ -28,8 +35,8 @@ body {
     font-family: georgia, arial, sans-serif;
     line-height: 1.6;
     font-size: 20px;
-    color: black;
-    font-style: italic;
+    color: rgb(7, 7, 43);
+    font-style:italic;
     text-align: center;
 }
 
@@ -37,9 +44,19 @@ body {
     font-family: georgia, arial, sans-serif;
     line-height: 1.6;
     font-size: 14px;
-    color: black;
+    color:rgb(7, 7, 43);
     font-style: italic;
     text-align: left;
+}
+
+.textos{
+    font-family: georgia, arial, sans-serif;
+    line-height: 1.6;
+    font-size: 15px;
+    text-align: justify;
+    color: rgb(7, 7, 43);
+    font-style: unset;
+    margin-top: 5px;
 }
 
 .rendas {
@@ -57,13 +74,21 @@ body {
     margin-bottom: 30px;
     border-radius: 5px;
 }
+.titulotxt{
+    font-family: georgia, arial, sans-serif;
+    line-height: 1.6;
+    font-size: 20px;
+    color: rgb(7, 7, 43);
+    font-style:unset;
+    text-align:justify;
+}
 
 .legend {
     font-family: georgia, arial, sans-sefif;
     font-size: 15px;
     font-style: italic;
     text-align: center;
-    background-color: black;
+    background-color: rgb(7, 7, 43);
     color: white;
     height: 25px;
     width: 75%;
@@ -85,7 +110,7 @@ body {
     line-height: 1.6;
     font-size: 12px;
     text-align: left;
-    color: black;
+    color: rgb(7, 7, 43);
     font-style: italic;
     margin-top: 5px;
 }
@@ -103,11 +128,24 @@ body {
     font-family: georgia, arial, sans-serif;
     font-style: italic;
     color: white;
-    background-color: black;
-    border-color: black;
+    background-color:rgb(7, 7, 43);
+    border-color: rgb(7, 7, 43);
     border-radius: 5px;
     margin: 5px;
     cursor: pointer;
+}
+
+.btnlimpar{
+    font-family: georgia, arial, sans-serif;
+    font-style: italic;
+    color: white;
+    background-color:rgb(7, 7, 43);
+    border-color: rgb(7, 7, 43);
+    border-radius: 5px;
+    margin: 5px;
+    cursor: pointer;    
+   
+    
 }
 
 .button-finish {
@@ -151,3 +189,4 @@ table td img{
 .center{
     text-align: center;
 }
+

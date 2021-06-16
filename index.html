@@ -1,136 +1,170 @@
 
 <html>
 
-<head>
-    <meta charset="utf-8">
-    <meta name="Author" content="Angélika,Arthur,Bruno S,Bruno P,Fernando,Gabriel e karla.">
-    <meta name="desciption" content="Página web de finanças">
-    <meta name="robots" content="index, follow">
-    <meta name="keywords" content="html5 tecnologia">
-    <link rel="stylesheet" type="text/css" href="./css/style.css">
-    <title>Banco de Finanças</title>
-    <script src="js/base.js"></script>
-</head>
-
-<body>
-    <div class="imagem-financa">
-        <img src="./assets/img/bancodefinancas.jpg" alt="Logotipo Banco de Finanças" class="logotipo">
-    </div>
-    <div class="conteudo">
-        <p class="introducao">
-            Seja bem vindo ao Banco de Finanças!<br> Aqui você pode administrar suas finanças de forma prática e rápida.
-        </p>
-
-
-        <form method="GET" action="#" class="paginaweb">
-            <fieldset class="fieldset">
-                <legend class="legend"> Dados Pessoais</legend>
-                <div>
-                    <label class="labels">Nome completo:</label>
-                    <input type="text" class="input">
-                </div>
-                <div>
-                    <label class="labels">Email:</label>
-                    <input type="email" maxlength="100" placeholder="Digite um email" class="input">
-                </div>
-                <div>
-                    <label class="labels"> Data de nascimento:</label>
-                    <input type="date" min="1900-01-01" max="2200-01-01">
-                    <div class="labels">
+    <head>
+        <meta charset="utf-8">
+        <meta name="Author" content="Angélika,Arthur,Bruno S,Bruno P,Fernando,Gabriel e karla.">
+        <meta name="desciption" content="Página web de finanças">
+        <meta name="robots" content="index, follow">
+        <meta name="keywords" content="html5 tecnologia">
+        <link rel="stylesheet" type="text/css" href="./css/style.css">
+        <title>Banco de Finanças</title>
+        <script src="js/base.js"></script>
+    </head>
+    
+    <body>
+        <div class="imagem-financa"></div>
+            <img src="assets/img/bbfinancas2.jpg" alt="Logotipo Banco de Finanças" class="logotipo">
+            <br>
+            <br>
+        </div>
+        <div class="conteudo">
+           
+            <p class="introducao">Planejamento Financeiro.<br>Organize aqui suas finanças e dê adeus as dívidas!</p>
+           
+            <p class="titulotxt">Por que usar o orçamento?</p>     
+            <p class="textos">O planejamento é essencial em todas as áreas: Familiar,profissional,acadêmica e financeira.Planejar é essencial e impressindível na vida de qualquer Pessoa
+                ou empresa e não é diferente na família. Com esse controle você pode acabar descobrindo que o seu dinheiro rende mais,o que além de evitar descontroles, vai permitir 
+                que você invista ou guarde o que sobrar. </p>
+            <p class="titulotxt">Como fazer um orçamento?</p>   
+            <p class="textos">A primeira coisa a se verificar em seu planejamneto é: onde estou,onde quero chegar, quando e como pretendo chegar.Depois, deve-se definir as receitas,
+                despesas e investimentos.Deve-se então organiza-las da forma que você desejar. </p>
+            <p class="titulotxt">Vamos lá?</p>
+            
+    
+           
+    
+            <form method="GET" action="#" class="paginaweb">
+                <fieldset class="fieldset">
+                    <legend class="legend"> Dados Pessoais</legend>
+                    <div>
+                        <label class="labels">Nome completo:</label>
+                        <input type="text" class="input">
                     </div>
                     <div>
-                        Sexo:
-                        <input type="radio" name="sex" id="sexo-m" />
-                        <label class="labels" for="sexo-m">Masculino</label>
-                        <input type="radio" name="sex" id="sexo-f" />
-                        <label class="labels" for="sexo-f">Feminino</label>
+                        <label class="labels">Email:</label>
+                        <input type="email" maxlength="100" placeholder="Digite um email" class="input">
                     </div>
-            </fieldset>
-
-            <h1 class="subtitulo">Insira os dados a serem calculados:</h1>
-            <fieldset class="fieldset">
-
-                <legend class="legend">Informações financeiras</legend>
-
-                <div class="rendas">
-                    <div class="renda-fixa">
-                        <label class="labels"> Renda fixa mensal:</label>
-                        <input type="number" name="number1" id="number1">
-                    </div>
-                    <div class="renda-extra">
-                        <label class="labels">Renda extra mensal:</label>
-                        <input type="number" name="number2" id="number2">
-                    </div>
-                </div>
-
-                <br>
-                <label class="labels"> Calculo de receitas:</label>
-                <input type="text" name="result" id="result" readonly>
-                <input type="button" value="Calcular" class="buttons btn-renda" onclick="calcular()" name="">
-            </fieldset>
-
-            <fieldset class="fieldset">
-                <legend class="legend">Informações de despesas</legend>
-                <h1 class="subtitulo">Despesa :</h1>
-                <label class="labels"> Escolha uma categoria:</label>
-                <select name="Categorias" id="categoria" onchange="selecao();">
-                            <option value="">Selecione</option>
-                            <option value="Luz">Luz</option>
-                            <option value="Água">Água</option>
-                            <option value="Telefone">Telefone</option>
-                            <option value="Locomoção">Locomoção</option>
-                            <option value="Gerais">Gastos anuais (ipva, iptu...)</option>
-                            <option value="Outros">Outros</option>
-                </select>
-
-                <div>
-                    <label class="labels"> Descrição (Opcional):</label>
-                    <input rows="3" class="input" id="descricao" type="text">
-                    <div class="data-gasto">
-                        <div class="date-venc">
-                            <label class="labels"> Data de vencimento:</label>
-                            <input type="date" min="1900-01-01" max="2200-01-01" id="vencimento">
+                    <div>
+                        <label class="labels"> Data de nascimento:</label>
+                        <input type="date" min="1900-01-01" max="2200-01-01">
+                        <div class="labels">
                         </div>
-                        <div class="gasto">
-                            <label class="labels"> Digite o valor gasto:</label>
-                            <input type="number" name="number" class="number" id="valor">
+                        <div>
+                            Sexo:
+                            <input type="radio" name="sex" id="sexo-m" />
+                            <label class="labels" for="sexo-m">Masculino</label>
+                            <input type="radio" name="sex" id="sexo-f" />
+                            <label class="labels" for="sexo-f">Feminino</label>
+                        </div>
+                </fieldset>
+    
+                <p class="titulotxt">Receitas</p>   
+                <p class="textos">Receita é tudo aquilo que te traz entrada monetária. Você pode incluir todas as suas receitas somadas abaixo. Pode ser considerado receita: 
+                    Salário ou aposentadoria, décimo terceiro salário,aluguéis e arrendamentos, juros de aplicações financeiras,heranças e doações recebidas,restituição de imposto de renda,
+                entre outros. </p>
+                <fieldset class="fieldset">
+    
+                    <legend class="legend">Informações financeiras</legend>
+    
+                    <div class="rendas">
+                        <div class="renda-fixa">
+                            <label class="labels"> Renda fixa mensal:</label>
+                            <input type="number" name="number1" id="number1">
+                        </div>
+                        <div class="renda-extra">
+                            <label class="labels">Renda extra mensal:</label>
+                            <input type="number" name="number2" id="number2">
                         </div>
                     </div>
-                </div>                
-                <div class="btn-adicina-remove">
-                    <input type="button" value="Adicionar Despesa" class="buttons btn-adiciona-renda" onclick="despesa.adicionar()">
-                    <input type="button" value="Limpar Campos" class="buttons btn-remove-renda" onclick="despesa.cancelar()">    
-                </div>
-
-            </fieldset>
-
-            <fieldset class="fieldset">
-                <legend class="legend">Minha Tabela de gastos </legend>
-                <div class="content">
-                    <table border = "1">
-                        <thead class="center">
-                            <th>ID</th>
-                            <th >Categoria</th>
-                            <th >Vencimento</th>
-                            <th >Valor</th>
-                            <th >Descrição</th>  
-                            <th>Ações</th>                          
-                        </thead>
-                        <tbody id="tb-dados-categoria">
-                           
-                        </tbody> 
-                    </table>   
-                   
-                </div>
-            </fieldset>
-
-            <!-- <div class="button-finish">
-                <input type="submit" value="Enviar" class="buttons">
-                <input type="reset"  value="Limpar" class="buttons">
-            </div> -->
-
-        </form>
-        </div>
-</body>
-
-</html>
+    
+                    <br>
+                    <label class="labels"> Calculo de receitas:</label>
+                    <input type="text" name="result" id="result" readonly>
+                    <input type="button" value="Calcular" class="buttons btn-renda" onclick="calcular()" name="">
+                </fieldset>
+                <p class="titulotxt">Despesas</p>   
+                <p class="textos">Despesas são todos os gastos recorrentes de um determinado período. Você pode organizar suas despesas detalhando e incluindo as datas de vencimento.
+                    Pode ser considerado despesa: Alimentação, água e luz,telefone e internet,veículo,lazer,saúde,plano de saúde,previdência,seguros,mensalidades,aluguéis e 
+                financiamentos,entre outros. </p>
+                <fieldset class="fieldset">
+                    <legend class="legend">Informações de despesas</legend>
+                    <h1 class="subtitulo">Despesa :</h1>
+                    <label class="labels"> Escolha uma categoria:</label>
+                    <select name="Categorias" id="categoria" onchange="selecao();">
+                                <option value="">Selecione</option>
+                                <option value="Alimentação">Alimentação</option>
+                                <option value="Água e Luz">Água e Luz</option>
+                                <option value="Telefone e Internet">Telefone e Internet</option>
+                                <option value="Transporte">Transporte</option>
+                                <option value="Lazer">Lazer</option>
+                                <option value="Medicamentos">Medicamentos</option>
+                                <option value="Plano de saúde">Plano de saúde</option>
+                                <option value="Previdência Privada">Previdência Privada</option>
+                                <option value="Seguro">Seguro (Casa,Carro,Vida,Etc.)</option>
+                                <option value="Mensalidade Escolar">Mensalidade Escolar</option>
+                                <option value="Manutenção de Veículo">Manutenção de Veículo</option>
+                                <option value="Aluguel ou Financiamento">Aluguel ou Financiamento</option>
+                                <option value="Mensalidade Streaming">Mensalidade Streaming</option>
+                                <option value="Ipva,Iptu,Etc">Ipva,Iptu,Etc</option>
+                                <option value="Outros">Outros</option>
+    
+    
+                    </select>
+                    <br>
+                    <div>
+                    <br>
+                        <label class="labels"> Descrição (Opcional):</label>
+                        <input rows="3" class="input" id="descricao" type="text">
+                        <div class="data-gasto">
+                            <div class="date-venc">
+                                <label class="labels"> Data de vencimento:</label>
+                                <input type="date" min="1900-01-01" max="2200-01-01" id="vencimento">
+                            </div>
+                            <div class="gasto">
+                                <label class="labels"> Digite o valor gasto:</label>
+                                <input type="number" name="number" class="number" id="valor">
+                            </div>
+                        </div>
+                    </div>                
+                    <div class="btn-adicina-remove">
+                        <input type="button" value="Adicionar nova despesa" class="buttons btn-adiciona-renda" onclick="despesa.adicionar()">
+                        <input type="button" value="Limpar despesa" class="buttons btn-remove-renda" onclick="despesa.cancelar()">    
+                    </div>
+    
+                </fieldset>
+    
+                <fieldset class="fieldset">
+                    <legend class="legend">Minha Tabela de gastos </legend>
+                    <div class="content">
+                        <table border = "1">
+                            <thead class="center">
+                                <th>ID</th>
+                                <th >Categoria</th>
+                                <th >Vencimento</th>
+                                <th >Valor</th>
+                                <th >Descrição</th>  
+                                <th>Ações</th>                          
+                            </thead>
+                            <tbody id="tb-dados-categoria">
+                               
+                            </tbody> 
+                        </table>   
+                      
+                    </div>
+    
+                </fieldset>
+                <p class="textos">Um sonho sem ação é apenas um desejo.Se você quer viver um "amanhã" melhor, precisa começar a se planejar "hoje"! </p>
+                <input type="reset" value="Limpar campos" class="btnlimpar">
+    
+                <!-- <div class="button-finish">
+                    <input type="submit" value="Enviar" class="buttons">
+                    <input type="reset"  value="Limpar" class="buttons">
+                </div> -->
+    
+            </form>
+            </div>
+    
+    </body>
+    
+    </html>
